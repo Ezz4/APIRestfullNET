@@ -23,6 +23,8 @@ namespace ConexionGestionPedidos
     /// </summary>
     public partial class MainWindow : Window
     {
+        SqlConnection miConexionSql;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -88,7 +90,7 @@ namespace ConexionGestionPedidos
             
 
         }
-        SqlConnection miConexionSql;
+        
         private void MuestraTodosPedidos()
         {
             try
@@ -173,6 +175,39 @@ namespace ConexionGestionPedidos
         private void PedidosCliente_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Actualiza ventanaActualizar = new Actualiza((int)listaCliente.SelectedValue);
+            
+            try
+            {
+                string consulta = "SELECT nombre FROM CLIENTE where Id=@ClId";
+                SqlCommand miSqlCommand = new SqlCommand(consulta, miConexionSql);
+                SqlDataAdapter miAdaptadorSql = new SqlDataAdapter(miSqlCommand);
+
+                using (miAdaptadorSql)
+                {
+                    miSqlCommand.Parameters.AddWithValue("@ClId", listaCliente.SelectedValue);
+                    DataTable clientesTabla = new DataTable();
+                    miAdaptadorSql.Fill(clientesTabla);
+                    ventanaActualizar.cuadoActualiza.Text = clientesTabla.Rows[0]["nombre"].ToString();
+
+
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.ToString());
+            }
+            ventanaActualizar.ShowDialog();
+            MuestraClientes();
+        }
+
+        private void listaCliente_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            MuestraPedidos();
         }
     }
 }

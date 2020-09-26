@@ -13,3 +13,5 @@ C:\Users\zuryt\source\repos\ConexionGestionPedidos\obj\Debug\ConexionGestionPedi
 C:\Users\zuryt\source\repos\ConexionGestionPedidos\obj\Debug\ConexionGestionPedidos.csproj.CoreCompileInputs.cache
 C:\Users\zuryt\source\repos\ConexionGestionPedidos\obj\Debug\ConexionGestionPedidos.exe
 C:\Users\zuryt\source\repos\ConexionGestionPedidos\obj\Debug\ConexionGestionPedidos.pdb
+C:\Users\zuryt\source\repos\ConexionGestionPedidos\obj\Debug\Actualiza.g.cs
+C:\Users\zuryt\source\repos\ConexionGestionPedidos\obj\Debug\Actualiza.baml

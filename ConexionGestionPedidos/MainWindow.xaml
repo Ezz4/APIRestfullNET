@@ -14,7 +14,7 @@
             <ColumnDefinition Width="485*"/>
         </Grid.ColumnDefinitions>
         <Label Content="Clientes" HorizontalAlignment="Left" Height="40" Margin="29,27,0,0" VerticalAlignment="Top" Width="180" FontSize="24" Grid.ColumnSpan="3"/>
-        <ListBox Name="listaCliente" HorizontalAlignment="Left" Height="264" Margin="29,97,0,0" VerticalAlignment="Top" Width="196"  Grid.ColumnSpan="3"/>
+        <ListBox Name="listaCliente" HorizontalAlignment="Left" Height="264" Margin="29,97,0,0" VerticalAlignment="Top" Width="196"  Grid.ColumnSpan="3" SelectionChanged="listaCliente_SelectionChanged"/>
         <ListBox Name ="PedidosCliente"  HorizontalAlignment="Left" Height="264" Margin="257,97,0,0" VerticalAlignment="Top" Width="211" SelectionChanged="PedidosCliente_SelectionChanged" Grid.ColumnSpan="4"/>
         <Label Content="Pedidos" HorizontalAlignment="Left" Margin="257,27,0,0" VerticalAlignment="Top" Height="40" Width="110" FontSize="24" RenderTransformOrigin="0.379,0.253" Grid.ColumnSpan="4"/>
         <ListBox Name="TodosPedidos" HorizontalAlignment="Left" Height="347" VerticalAlignment="Top" Width="264" Margin="207.2,97,0,0" FontSize="14" Grid.Column="3"/>
@@ -23,6 +23,7 @@
         <Button Content="Insertar" Grid.Column="2" HorizontalAlignment="Left" Margin="24,376,0,0" VerticalAlignment="Top" Width="98" Height="40" Click="Button_Click_1"/>
         <Button Content="Borrar" Grid.Column="2" HorizontalAlignment="Left" Margin="127,376,0,0" VerticalAlignment="Top" Width="98" Height="40" Click="Button_Click_2"/>
         <TextBox Name = "insertaCliente" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="23" Margin="29,435,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="196"/>
+        <Button Content="Actualizar" Grid.Column="2" HorizontalAlignment="Left" Margin="257,376,0,0" VerticalAlignment="Top" Width="211" Grid.ColumnSpan="2" Height="40" Click="Button_Click_3"/>
 
     </Grid>
 </Window>

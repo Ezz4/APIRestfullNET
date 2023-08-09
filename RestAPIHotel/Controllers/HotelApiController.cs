@@ -9,10 +9,18 @@ namespace RestAPIHotel.Controllers
     [ApiController]
     public class HotelApiController : ControllerBase
     {
+        private readonly ILogger<HotelApiController> _logger;
+        public HotelApiController(ILogger<HotelApiController> logger)
+        {
+            _logger = logger;
+        }
+
+
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<IEnumerable<roomDTO>> GetRooms()
         {
+            _logger.LogInformation("Getting all villas");
             return Ok(HotelStore.roomList);
         }
 
@@ -24,6 +32,7 @@ namespace RestAPIHotel.Controllers
         {
             if (id == 0)
             {
+                _logger.LogError("Get room error with ID" + id);
                 return BadRequest();
             }
             var room = HotelStore.roomList.FirstOrDefault(t => t.Id == id);

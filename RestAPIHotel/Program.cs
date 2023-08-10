@@ -1,6 +1,25 @@
+using Microsoft.EntityFrameworkCore;
+using RestAPIHotel.Data;
+using Serilog;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(connectionString));
+
+//builder.Services.AddDbContext<ApplicationDbContext>(option =>
+//{
+//    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConnection"));
+//});
+
+
+Log.Logger = new LoggerConfiguration().MinimumLevel.Debug()
+    .WriteTo.File("Log/hotel.txt", rollingInterval: RollingInterval.Year).CreateLogger();
+
+builder.Host.UseSerilog();
 
 builder.Services.AddControllers(option =>
 {

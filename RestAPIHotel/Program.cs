@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using RestAPIHotel;
 using RestAPIHotel.Data;
 using Serilog;
 
@@ -9,6 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
+
+builder.Services.AddAutoMapper(typeof(MappingConfig));
 
 //builder.Services.AddDbContext<ApplicationDbContext>(option =>
 //{

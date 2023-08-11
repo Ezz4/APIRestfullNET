@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "71mtaefSgH0xJ6uA05akg6HDD8Wn7NTG+BItial7CvZLlPDik2w0M/eAglTICHJUhcK1uofB06wT6aH1bh3m9g==",
+  "dgSpecHash": "CovRLzxw7WSwsthVGiNAfi2KhJHUJn3rmqXfdnzFEMnDTHTnYhBp63F25j9JlPhIdqD9k0q2IQg0mTP0o/J4iw==",
   "success": true,
   "projectFilePath": "C:\\Users\\zuryt\\source\\repos\\RestAPIHotel\\RestAPIHotel.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\zuryt\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\zuryt\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\zuryt\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\zuryt\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\zuryt\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -2,9 +2,9 @@
 
 namespace RestAPIHotel.Models.DTO
 {
-    public class roomDTO
+    public class roomUpdateDTO
     {
-        
+        [Required]
         public int Id { get; set; }
 
         [Required]
@@ -12,13 +12,13 @@ namespace RestAPIHotel.Models.DTO
         public string Name { get; set; }
 
         public string Details { get; set; }
-
+        [Required]
         public double Rate { get; set; }
-
+        [Required]
         public int Occupancy { get; set; }
-
+        [Required]
         public int Area { get; set; }
-
+        [Required]
         public string ImageUrl { get; set; }
 
         public string Url { get; set; }

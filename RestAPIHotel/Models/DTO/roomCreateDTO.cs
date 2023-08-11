@@ -2,10 +2,8 @@
 
 namespace RestAPIHotel.Models.DTO
 {
-    public class roomDTO
+    public class roomCreateDTO
     {
-        
-        public int Id { get; set; }
 
         [Required]
         [MaxLength(30)]
